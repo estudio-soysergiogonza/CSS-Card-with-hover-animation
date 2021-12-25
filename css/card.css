@@ -1,0 +1,62 @@
+.card {
+  color: var(--color-neutral-100);
+  background-image: url("../assets/img/card-bg.jpg");
+  background-size: cover;
+  padding-block-start: 10rem;
+  inline-size: 35ch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+.card:hover {
+  transform: scale(1.7);
+}
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.card-title {
+  position: relative;
+  inline-size: max-content;
+  /* outline: 1px solid red; */
+}
+.card-title::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  block-size: 4px;
+  /* inline-size: 100%; */
+  inline-size: calc(100% + var(--padding));
+  background: var(--color-accent-400);
+  transform: scale(0);
+  transition: transform 500ms ease;
+}
+.card:hover .card-title::after {
+  transform: scale(1);
+}
+.card-body {
+  color: rgba(255 255 255 / 0.85);
+}
+.button {
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  color: var(--color-neutral-900);
+  background-color: var(--color-accent-400);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--color-neutral-100);
+}

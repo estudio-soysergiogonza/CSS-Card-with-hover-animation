@@ -1,0 +1,21 @@
+@import "./card.css";
+
+:root {
+  --color-neutral-900: hsl(207, 19%, 9%);
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-accent-400: hsl(142, 90%, 61%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background-color: var(--color-neutral-900);
+  font-family: sans-serif;
+}
